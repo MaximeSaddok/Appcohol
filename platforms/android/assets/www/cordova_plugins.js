@@ -46,6 +46,13 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/me.rahul.plugins.sqlDB/www/sqlDB.js",
+        "id": "me.rahul.plugins.sqlDB.sqlDB",
+        "clobbers": [
+            "window.plugins.sqlDB"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -56,7 +63,8 @@ module.exports.metadata =
     "cordova-plugin-device": "1.0.1",
     "cordova-plugin-splashscreen": "2.1.0",
     "cordova-plugin-whitelist": "1.1.0",
-    "io.litehelpers.cordova.sqlite": "0.7.10-dev"
+    "io.litehelpers.cordova.sqlite": "0.7.10-dev",
+    "me.rahul.plugins.sqlDB": "1.0.3"
 }
 // BOTTOM OF METADATA
 });

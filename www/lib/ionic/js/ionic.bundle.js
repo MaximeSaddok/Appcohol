@@ -10816,7 +10816,7 @@ function toDebugString(obj) {
  * - `full` – `{string}` – Full version string, such as "0.9.18".
  * - `major` – `{number}` – Major version number, such as "0".
  * - `minor` – `{number}` – Minor version number, such as "9".
- * - `dot` – `{number}` – Dot version number, such as "18".
+ * - `dot` ��� `{number}` – Dot version number, such as "18".
  * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
  */
 var version = {
@@ -52971,7 +52971,7 @@ IonicModule
  * @usage
  *
  * ```html
- * <body ng-app="starter">
+ * <body ng-app="appcohol">
  *   <!-- The nav bar that will be updated as we navigate -->
  *   <ion-nav-bar class="bar-positive">
  *   </ion-nav-bar>
