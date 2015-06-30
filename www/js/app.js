@@ -4,7 +4,7 @@
 // 'appcohol' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 
-var db = null;
+
 
 angular.module('appcohol', ['ionic', 'appcohol.controllers', 'appcohol.services', 'ngCordova'])
 .run(function($ionicPlatform) {
@@ -17,24 +17,14 @@ angular.module('appcohol', ['ionic', 'appcohol.controllers', 'appcohol.services'
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
-    if (window.cordova && window.SQLitePlugin) {
-      db = $cordovaSQLite.openDB("db/db.sqlite");
-    } else {
-      // Ionic serve syntax
-      db = window.openDatabase("db/db.sqlite", "1.0", "appcohol", -1);
-      db.transaction(function(tx) {
-      	tx.executeSql("CREATE TABLE TableTesassteasd (id REAL UNIQUE, text TEXT)", [], function(tx){
-          console.log("TableTestee created !");
-      		// log.innerHTML = '<p>Table1Test created!</p>';
-      	}, function (e){
-          console.log("TableTest error !");
-        });
-      });
 
-      // db.executeSQL(db, "CREATE TABLE IF NOT EXISTS persons (id integer primary key, name text, age integer, sexe text, height integer, weight integer)");
+    var pouchDbUrl = "http://as-app:4|7s|dFB/IBNP~V@redrop.thekey.pw:5984/app_test_1";
+    var localDB = new PouchDB("app_test_1");
+    var remoteDB = new PouchDB(pouchDbUrl, {adapter: 'websql'});
+    if (!remoteDB.adapter) {
+      remoteDB = new PouchDB(pouchDbUrl);
+      console.log("used PouchDB without websql adapter.");
     }
-    // window.sqlitePlugin.execute(db, "CREATE TABLE IF NOT EXISTS persons (id integer primary key, name text, age integer, sexe text, height integer, weight integer)");
-    // $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS persons (id integer primary key, name text, age integer, sexe text, height integer, weight integer)");
-
+    localDB.sync(remoteDB, {live: true});
   });
 })
