@@ -1,3 +1,17 @@
+.wrapper {
+  position: relative;
+}
+
+.title p {
+  background-color: black;
+  bottom: 5%;
+  color: white;
+  font-family: Roboto;
+  font-size: 1.25em;
+  left: 0;
+  padding: 0.25em 0.75em;
+  position: absolute;
+}
 /*!
  * Copyright 2014 Drifty Co.
  * http://drifty.com/

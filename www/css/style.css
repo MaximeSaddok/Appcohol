@@ -1,1 +1,58 @@
-/* Empty. Add your own CSS if you like */
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+/*.cat_title {
+  position: relative;
+}
+*/
+#graph_btn{
+	background: url("/img/graph4.png") no-repeat center;	
+	width: 290px;
+	height:290px;
+/*	padding:10px 50px 10px 50px;
+*/	border-top: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right: transparent;
+	font-size: 1.5em;
+	font-family: Comic Sans MS;
+	
+}
+#quiz_btn{
+
+	background: url("/img/quiz.png") no-repeat center;	
+	width: 290px;
+	height:290px;
+	border-top: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right: transparent;
+}
+#about_btn{
+	background: url("/img/about_us.png") no-repeat center;	
+	width: 290px;
+	height:290px;
+	border-top: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right: transparent;
+}
+
+#conseil_btn{
+	background: url("/img/conseil2.png") no-repeat center;	
+	width: 290px;
+	height:290px;
+	border-top: transparent;
+	border-bottom: transparent;
+	border-left: transparent;
+	border-right: transparent;
+}
+ 
+
+
+
+.background {
+    background-color: #001900;
+    position: absolute;
+    background-image: url("/img/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
