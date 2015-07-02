@@ -1,0 +1,23 @@
+<ion-view view-title="Bienvenue sur appcohol">
+  <ion-content id="frame" class="background" ng-init="loadImages()">
+    <div class="main_container" >
+      <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
+        <div class="col col-20 col-offset-20" ng-if="$index < images.length">
+          <a id="graph_btn" class="button"></a>
+        </div>
+        <div class="col col-20 col-offset-10" ng-if="$index < images.length">
+          <a id="conseil_btn" class="button"></a>
+        </div>
+      </div>
+                  
+      <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
+        <div class="col col-20 col-offset-20" ng-if="$index < images.length">
+          <a id="quiz_btn" href="#/squiz" class="button"></a>
+        </div>
+        <div class="col col-20 col-offset-10" ng-if="$index < images.length">
+            <a id="about_btn" class="button"></a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

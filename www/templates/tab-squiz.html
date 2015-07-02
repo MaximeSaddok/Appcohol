@@ -1,0 +1,11 @@
+<ion-view view-title="AppChool: List des Quiz.">
+  <ion-content>
+    <div class="list">
+        <a class="item item-thumbnail-left" ng-repeat="cuiz in quiz" href="#/quiz/{{cuiz.id}}/0">
+          <img src="{{cuiz.pic}}">
+          <h2>{{cuiz.title}}</h2>
+          <p>{{cuiz.desc}}</p>
+        </a>
+    </div>
+  </ion-content>
+</ion-view>

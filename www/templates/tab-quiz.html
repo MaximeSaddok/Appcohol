@@ -1,0 +1,43 @@
+<ion-view view-title="{{quiz.title}}: Question {{quest.id + 1}} ">
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item item-avatar">
+         <img src="{{quiz.pic}}">
+        <h2>Question {{quest.id + 1}}</h2>
+        <p>{{quiz.title}}</p>
+      </div>
+
+      <div class="item item-body">
+        <p align="center"><img src="{{quest.pic}}">
+            </br>{{quest.quest}}</br>
+        </p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left" >
+      
+        <a href="{{next}}#1" ng-click="openModal(1)" class="tab-item" style="max-width:none"><i class="icon">Vrai</i></a>
+        <a href="{{next}}#0" ng-click="openModal(0)" class="tab-item" style="max-width:none"><i class="icon">Faux</i></a>
+        <a href="{{next}}#2" ng-click="openModal(2)" class="tab-item" style="max-width:none"><i class="icon">Vrai et Faux </i></a>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
+
+<script id="modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1  class="title bar-positive">La reponse est : {{resp[quest.resp]}}</h1>
+      <div class="button button-clear" ng-click="closeModal()"><span class="icon ion-close"></span></div>
+    </ion-header-bar>
+    <ion-content>
+      <center><h1>{{quest.rDesc}}</h1></center>
+    </ion-content>
+     <div ng-click="closeModal()" class="bar bar-footer bar-balanced">
+       <div class="title">continuer</div>
+    </div>
+  </ion-modal-view>
+</script>
+
+
+
